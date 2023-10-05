@@ -1,0 +1,23 @@
+
+  <h2>Panier</h2>
+  <div class="cartEmpty">
+  	<!--Affichage msg panier vide-->
+  </div>
+    <table class="table table-hover thead">
+      <tbody class="displayCart">
+      <!--récupère l'affichage du fichier displayCart.js-->
+      </tbody>
+      <tfoot class="totalPanier">
+      	
+      </tfoot>
+      </table>
+     	<div class="valider">
+     	<?php  if(Session::isConnected()):?>
+        <a href="checkout.php" class="button-menu" id="order"> Passer la commande</a>
+        <?php else: ?>
+        <a href="authentification.php" class="button-menu"> Passer la commande</a>
+      <?php endif; ?>
+     	
+     	</div>
+   
+
