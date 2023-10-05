@@ -1,0 +1,43 @@
+
+  	<section class="formdesing">
+   <div class="wrapperM login">
+        <div class="containerForm">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Content de vous revoir</h2>
+                    <!--<p>Créez votre compte.</p>-->
+                    <!--<a href="registration.php" class="btn">S'inscrire</a>-->
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Connexion</h2>
+                    <form action="" method="POST">
+                        <p>
+                            <label>E-mail<span>*</span></label>
+                            <input type="email" name="email" id="email" placeholder="Email" value="<?= $email ?>">
+                             <span class="error"> <?=  $errors['email'] ?? '';?></span>
+                        </p>
+                        <p>
+                            <label>Mot de passe<span>*</span></label>
+                            <input type="password" name="password" id="password" placeholder="Password" value="<?= $password?>">
+                            <span class="error"> <?= $errors['password'] ?? '';?></span>
+                        </p>
+                        <p>
+                            <input type="submit" value="S'identifier">
+                        </p>
+                        <p>
+                            <a href="forget_password.php">Mot de passe oublié?</a>
+                        </p>
+
+                    </form>
+                </div>
+                 <a href="registration.php" class="">Pas de compte ? Créez-en un ici</a> 
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    
