@@ -1,0 +1,86 @@
+<!--formulaire d'inscription-->
+<section>
+    <div class="wrapper login">
+        <div class="containerForm">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Content de vous voir</h2>
+                    <!--<p>Créez votre compte.</p>-->
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Créez votre compte</h2>
+                    <form action="" method="POST">
+                        <p>
+                            <label for="prenom">Prénom :<span>*</span></label>
+                            <input type="text" name="firstname" id="firstname" value="<?= $firstName?>"/>
+                           <span class="error"> <?= $errors['firstname'] ?? '' ;?></span>
+                        </p>
+                        <p>
+                            <label for="nom">Nom :<span>*</span></label>
+                            <input type="text" name="lastname" id="lastname" value="<?= $lastName?>"/>
+                            <span class="error"> <?php echo $errors['lastname'] ?? '';?></span>
+                           
+                        </p>
+
+                        <p>
+                            <label for="numero">Numéro de téléphone:<span>*</span></label>
+                            <input type="text" id="phonenumber" name="phonenumber" value="<?= $phoneNumber?>"/>
+                            <span class="error"> <?= $errors['phonenumber'] ?? '';?></span>
+                        </p>
+                        <p>
+                            <label for="mail">E-mail:<span>*</span></label>
+                            <input type="email" id="email" name="email" value="<?= $email ?>"/>
+                            <span class="error"> <?=  $errors['email'] ?? '';?></span>
+                             
+                            
+                        </p>
+
+                        <p>
+                            <label for="password">Mot de passe :<span>*</span></label>
+                            <input type="password" name="password" id="password"  value="<?= $password?>"/>
+                            <span class="error"> <?= $errors['password'] ?? '';?></span>
+                          
+
+                        </p>
+                           <p>
+                            <label for="password">Confirmer le mot de passe :<span>*</span></label>
+                            <input type="password" name="confirm_password" id="password" value="<?= $confirm_password?>" />
+                            <span class="error"><?= $errors['confirm_password'] ?? '';?></span>
+                          
+
+                        </p>
+
+
+                        <p>
+                            <label for="news">Recevoir des newsletter </label>
+                            <input type="checkbox" name="isnews" id="isnews">
+
+                        </p>
+                         
+                         <p>
+                           
+                          <label class="form-check-label" for="invalidCheck">
+                            Accepter les termes et conditions
+                          </label>
+                          <input type="checkbox" value="" id="invalidCheck" name="invalidCheck" />
+                         
+                             <span class="error"><?= $errors['invalidCheck'] ?? '';?></span>
+                          </p>
+                          
+                          <p><span class="error">* Champ obligatoire</span></p>
+                        <p>
+                            
+                            <input type="submit" value="S'inscrire">
+                        </p>
+                       
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+	
