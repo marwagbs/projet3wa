@@ -1,0 +1,31 @@
+ <h3 class="text-center"><br>Votre avis</h3> 
+   
+	<?php	if(Session::isConnected()) {
+		echo '<p class="text-white bg-dark text-center">Welcome '. $_SESSION['login']['firstname'] .', Donnez nous votre avis!</p>';
+		
+	}
+		?>
+		<?php if(Session::isConnected()): ?>
+    <form action="" method="POST">
+     <fieldset> 
+     <legend>Avis</legend>
+     <div> 
+   
+          <label for="number">Commentaire</label> 
+          <input type="text" name="comment" id="comment"/>
+    </div>
+
+
+	<h3 style="color: red"><?php echo $message ?></h3>
+     <div class="button">
+        <button type="submit">commenter</button>
+    </div>
+     </fieldset>
+    </form>
+    <?php else: ?>
+    <p class="text-center text-danger">Vous n'etes pas connecté !</p>
+    <p class="text-center">Pour écrire un commentaire, vous devez créer un compte ou se connecter!<p>  
+
+    
+    <?php endif; ?>
+
