@@ -1,0 +1,47 @@
+<section class="container">
+	<h1 class="title">La liste de nos produits</h1>
+	<p class="pProduct">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, illum.</p>
+	<div class="filterProduct">
+	    
+	<form action="filter.php" >
+        <label for="filter">Filter</label>
+        <select id="filterlist" name="filterlist" >
+            <option value="price_desc">Prix décroissant</option>
+            <option value="price_asc">Prix croissant</option>
+            <option value="name_asc">A-Z</option>
+            <option value="name_desc">Z-A</option>
+        </select>
+        
+        <p>Min
+            <span id="minView"><?= $minRange;?></span>
+        </p>
+        <div id="slider"></div>
+        <p>Max
+            <span id="maxView"><?= $maxRange; ?></span>
+        </p>
+        <input id="minHidden" type="hidden" name="minPrice" value="<?= $minRange; ?>">
+    <input id="maxHidden" type="hidden" name="maxPrice" value="<?= $maxRange; ?>">
+        <button type="submit" class="button-menu">Envoyer</button>
+    </form>
+	<div class="flexProduct">
+                <?php foreach($products as $element):?>
+                <article class="imgFlex">
+                    <img src="<?= $element["picture"]; ?>" alt="<?= $element["name"]; ?>">
+                    <div class="product">
+                    	<h3><?= $element["name"]; ?></h3>
+                    	<p class="desciption"><?= $element["description"]; ?></p>
+                    	<p><?= number_format($element["price"],2,'.','') ?>£</p>
+                   
+                    <?php if(Session::isConnected() && $_SESSION['login']['role']): ?>
+				<a href="remove.php?id=<?= $element["id"]; ?>" class="button-menu">Supprimer</a>
+				<a href="price.php?id=<?= $element["id"]; ?>" class="button-menu">modifier le prix </a>
+				<?php endif; ?>
+				
+				<a href="#" class="button-menu add" data-id="<?= $element["id"]; ?>" data-price="<?= number_format($element["price"],2,'.','') ?>" data-name="<?= $element["name"]; ?> "data-picture="<?= $element["picture"]; ?>">Ajouter au panier</a>
+			 </div>
+                </article>
+                
+                 <?php endforeach; ?>
+    </div>
+    </div>
+</section>
