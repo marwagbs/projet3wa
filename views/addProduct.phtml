@@ -1,0 +1,40 @@
+<section class="container">
+    <form action="" method="POST" enctype="multipart/form-data">
+     <fieldset>
+     <legend>Ajoutez votre produit</legend>
+    <div>
+        <label for="name">Nom de produit :</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="description">Description :</label>
+        <input type="text" id="description" name="description">
+    </div>
+    <div>
+        <label for="price">Price :</label>
+        <input type="text" id="price" name="price">
+    </div>
+    <div>
+        <label for="picture">Picture :</label>
+        <input type="file" id="picture" name="picture"
+            accept="image/png, image/jpeg">
+    </div>
+    <div>
+         <label>Categorie :</label>
+               <select name="category">
+               <?php foreach($categories as $element):?>
+                    <option value=category></option>
+                    <option value="<?= $element["id"];?>" title="<?= $element['description'];?>"><?= $element["name"];?></option>
+               <?php
+              endforeach;
+            ?>     
+               </select> 
+          <a href="addCategory.php" class="button-menu">Ajouter une categorie</a>
+    </div>
+    
+     <div class="button">
+        <button type="submit" class="button-menu">Ajouter</button>
+    </div>
+     </fieldset>
+</form>
+</section>
