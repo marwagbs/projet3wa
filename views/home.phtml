@@ -1,0 +1,121 @@
+<section>
+ 	<div class="slick">
+        <div><img src="img/slick/01.jpg" alt="slider1"></div>
+        <div><img src="img/slick/02.jpg" alt="slider2"></div>
+        <div><img src="img/slick//04.jpg" alt="slider3"></div>
+    </div> 
+ 	<h1 class="image-text">
+        Welcome to la malvasia restaurant
+ 	 </h1>
+ 	 <p class="image-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, temporibus!</p>
+ 	 <a href="reservation.php" class="image-a button-menu">Reservation</a>
+</section>
+ <section class="container">
+            <h2 class="title">About US </h2>
+             <p class="p-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla arcu sed leo ultrices, eget bibendum sem
+            vulputate</p>
+
+</section>
+        
+<section class="container ">
+       
+        <div class="section-history">    	
+             <div>
+             <h2 class="history">The history </h2>
+			<p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt veritatis ipsam ipsa saepe unde possimus dicta accusantium nulla sequi praesentium commodi repudiandae, fugiat aperiam reiciendis impedit eius aspernatur at dolore placeat quae maxime laudantium optio sapiente! Architecto sequi totam qui illo doloribus nisi cupiditate perspiciatis culpa quam recusandae facere tempore necessitatibus expedita iusto facilis, quis nihil id dignissimos ex corporis minima sit. Eos deserunt maxime at animi obcaecati error rem numquam ullam vitae hic ducimus labore, in, iure nostrum!</p>
+            </div>
+            <img src="img/food.jpg" alt="pasta">
+        </div>
+ <div class="section-history2">
+        <p class="intro-p">Soluta corporis est explicabo magni ducimus praesentium dignissimos hic laudantium accusantium maxime animi illum expedita sunt illo, eveniet voluptas reprehenderit quia, ipsam velit deserunt doloribus fugit iusto! Odit natus officia facere quae sunt eos unde repellat similique fugiat consectetur sint et qui, quod reiciendis perferendis. Corporis harum molestias doloribus, eaque est, quas. Amet doloribus aperiam voluptatem ad nemo minus voluptas ratione dolores in cumque dolore eius nostrum ipsa deleniti minima modi, officia odit temporibus velit excepturi, eligendi odio qui facere obcaecati.</p>
+              
+                <img src="img/h1.jpg" alt="slider3" class="img-slider">
+        
+   
+        
+</div>
+</section>
+<section class="container menu">
+            <h2 class="title">Discover Our Menu </h2>
+            <p class="intro-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic fuga sit illo modi aut aspernatur tempore laboriosam saepe dolores eveniet.</p>
+            <div class="menu-flex">
+                
+                <div>
+                    <img src="img/b1.jpg" alt="slider1">
+                    <h3 class="h3-menu">Lorem ipsum dolor sit amet consectetur</h3>
+                    <p class="p-menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+                </div>
+                <div>
+                    <img src="img/b2.jpg" alt="slider1">
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <p class="p-menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+                </div>
+                <div>
+                    <img src="img/b6.jpg" alt="slider1">
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+                </div>
+                <div>
+                    <img src="img/b4.jpg" alt="slider1">
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <p class="p-menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+                </div>
+                 <div>
+                    <img src="img/b5.jpg" alt="slider1">
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <p class="p-menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+                </div>
+                 <div>
+                    <img src="img/b7.jpg" alt="slider1">
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <p class="p-menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+                </div>
+            </div>
+                <?php 
+                $image="carte.jpg";
+            echo '<a href="index.php?file=' . urlencode($image) . '" class="button-menu">View complete menu</a>'
+            ?>
+    </section>
+
+        <section class="open-hours">
+            <h2 class="time">Opening Hours</h2>
+        <div class="hours-flex">
+        
+            <aside>
+                <h3 class="days"> Monday </h3>
+                 <p class="hours">closed<p></aside>
+        
+            <aside>
+                <h3 class="days"> Thuesday to friday </h3> 
+                <p class="hours">9AM -- 10PM</p></aside>
+            
+            <aside>
+                <h3 class="days"> Saturday to sanday </h3>
+                 <p class="hours">10AM -- 1PM</p></aside>
+            
+         </div>
+                
+		
+            
+        </section>
+
+        <section class="testimonials container">
+        <h2 class="testimonials-h2">testimonials   
+        <span>”</span>
+        </h2>
+  
+        <div class="center">
+            <?php foreach($feedback as $element):?>
+          <div class="testimonial-item">
+             <p ><?= $element["first_name"]; ?> <?= $element["last_name"]; ?> </p>
+            <p class="testimonials-p"><i class="fa-solid fa-quote-left"></i> <?= $element["comment"]; ?> <i class="fa-solid fa-quote-right"></i></p>
+            
+          </div>
+         <?php endforeach; ?>
+  
+        </div> 
+        
+       
+         
+     
+        </section>
