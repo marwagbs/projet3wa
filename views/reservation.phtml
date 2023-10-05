@@ -1,0 +1,47 @@
+<!--formulaire de reservation d'une table-->
+        <section class = "bgcimage">
+            <?php if(Session::isConnected()): ?>
+            <h2>Réserver votre table maintenant</h2>
+            
+            	<?php echo'<p>Welcome '. $_SESSION['login']['firstname'] .', Reserver votre Table!</p>';?>
+            
+            <div class = "img-container">
+                <div class = "reserved-img"></div>
+
+                <div class = "img-content">
+                    <h3>Réservation</h3>
+		<p><small><?php echo $message; ?></small></p>
+		<form  method="POST" class="formrev">
+			
+				 <div class = "form-row">
+                            <input type = "number" name="number" id="number" placeholder="Combien de personnes?" min = "1">
+                            <input id="date" type="date" name="date" value="date" class="from-input">
+                            </div>
+                        <div class = "form-row">
+                            <select name = "time" id="time" class="from-select">
+                                <option value = "hour-select">Sélectionnez l'heure</option>
+                                <option value = "10">12: 00</option>
+                                <option value = "10">12: 30</option>
+                                <option value = "10">13: 00</option>
+                                <option value = "10">13: 30</option>
+                                <option value = "10">18: 30</option>
+                                <option value = "10">19: 00</option>
+                                <option value = "10">19: 30</option>
+                                <option value = "10">20: 00</option>
+                                <option value = "10">20: 30</option>
+                                <option value = "10">21: 00</option>
+                            </select>
+                            
+                            <input type = "submit" value = "RÉSERVER VOTRE TABLE">
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+        </section>
+<?php else: ?>
+    <p></p>Vous n'êtes pas connecté!<br></p>
+    <p class="text-center">Pour faire une réservation, vous devez créer un compte ou se connecter!<p>  
+
+    
+    <?php endif; ?>
